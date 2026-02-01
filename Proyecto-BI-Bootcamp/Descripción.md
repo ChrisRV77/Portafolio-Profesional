@@ -1,8 +1,6 @@
 # Proyecto Bootcamp
 El siguiente proyecto se realizó como entregable final para el modulode Powerbi de un BOOTCAMP.
 
-[![Abrir Reporte](https://img.shields.io)](https://app.powerbi.com/view?r=eyJrIjoiOTFkNDc4NjEtNjI2YS00ZWJjLThiOTQtMWExZDg4NjhmMTgyIiwidCI6ImI3YWY4Y2FmLTgzZDgtNDY0NC04NWFlLTMxN2M1NDUyMjNjMSIsImMiOjR9&pageName=ad42e3672b2fb9e1865e)
+Puedes ver el reporte en el siguiente link: 
 
-[![Static Badge](https://img.shields.io/badge/Reporte)](https://app.powerbi.com/view?r=eyJrIjoiOTFkNDc4NjEtNjI2YS00ZWJjLThiOTQtMWExZDg4NjhmMTgyIiwidCI6ImI3YWY4Y2FmLTgzZDgtNDY0NC04NWFlLTMxN2M1NDUyMjNjMSIsImMiOjR9&pageName=ad42e3672b2fb9e1865e)
-
-![Static Badge]([https://img.shields.io/badge/Reporte](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge))
+![Static Badge](https://img.shields.io/badge/Campa%C3%B1as_y_respuestas-yellow?style=for-the-badge&label=Descarga%20Aqu%C3%AD&labelColor=white&color=yellow&link=https%3A%2F%2Fapp.powerbi.com%2Fgroups%2Fme%2Freports%2F0b48b1fd-92c0-470c-b1a1-ffc7dc828e87%2Fad42e3672b2fb9e1865e%3Flanguage%3Den-US%26experience%3Dpower-bi)
