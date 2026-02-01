@@ -90,4 +90,4 @@ Ahora, se tienen una visión clara de cual sector del público es que esta respo
 
 Puedes ver el reporte en el siguiente link: 
 
-![Static Badge](https://img.shields.io/badge/Campa%C3%B1as_y_respuestas-yellow?style=for-the-badge&label=Descarga%20Aqu%C3%AD&labelColor=white&color=yellow&link=https%3A%2F%2Fapp.powerbi.com%2Fgroups%2Fme%2Freports%2F0b48b1fd-92c0-470c-b1a1-ffc7dc828e87%2Fad42e3672b2fb9e1865e%3Flanguage%3Den-US%26experience%3Dpower-bi)
+[![Static Badge](https://img.shields.io/badge/Campa%C3%B1as_y_respuestas-yellow?style=for-the-badge&label=Descarga%20Aqu%C3%AD&labelColor=white&color=yellow)](https://app.powerbi.com/view?r=eyJrIjoiOTFkNDc4NjEtNjI2YS00ZWJjLThiOTQtMWExZDg4NjhmMTgyIiwidCI6ImI3YWY4Y2FmLTgzZDgtNDY0NC04NWFlLTMxN2M1NDUyMjNjMSIsImMiOjR9)
