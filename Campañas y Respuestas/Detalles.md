@@ -1,5 +1,10 @@
-# Proyecto Bootcamp
-El siguiente proyecto se realizó como entregable final para el modulode Powerbi de un BOOTCAMP.
+# Campañas y respuestas
+
+En el siguiente reporte se trabajo sobre una base de datos entregada en formato csv "marketing_raw.csv" el cual contenia la siguiente información:
+
+
+
+
 
 Puedes ver el reporte en el siguiente link: 
 
