@@ -25,6 +25,7 @@ En el lienzo se encuentra los valores de ingreso y salida de empleados general y
 
 En cambio, para el panel de rotación tenemos el valor de la rotación dado en el año, una segmentación dad por el tipo de salidas, además podemos comparar la cantidad de salidas con los años anteriores, también se cuenta con la rotación acumulada por meses y clasificada por año para que su crecimiento pueda ser comparado.
 
+Puedes ver el reporte en el siguiente link: 
 
--- valores pendientes Ausentismo
+[![Static Badge](https://img.shields.io/badge/Indicadores_Recursos_Humanos-yellow?style=for-the-badge&label=Revisalo_Aquí&labelColor=white&color=yellow)](https://app.powerbi.com/view?r=eyJrIjoiNmMwMzM0ODAtY2QzMy00ZmI5LWFkOGItMGJjNTU3ZjM1NTEyIiwidCI6ImI3YWY4Y2FmLTgzZDgtNDY0NC04NWFlLTMxN2M1NDUyMjNjMSIsImMiOjR9&pageName=5c0294144c5ad005c90a)
 
