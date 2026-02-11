@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "5f89e5f0d24450f5d230",
+  "position": {
+    "x": 868.33333333333337,
+    "y": 15,
+    "z": 3000,
+    "height": 233.36463172588279,
+    "width": 396.66666666666663,
+    "tabOrder": 16000
+  },
+  "visualGroup": {
+    "displayName": "Visual Bar por Product group",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "2c599beef8dcf4ba21a5"
+}

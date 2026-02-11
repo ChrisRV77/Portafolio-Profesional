@@ -1,0 +1,191 @@
+table dataset_relacional_2025
+	lineageTag: 224a2e8e-03ee-4fc5-bec1-3361d9e7c762
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e99a0411-e0ce-4010-b3bb-985a8ffa8f3d
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Hora or'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 06082ebf-77c8-4af2-965f-be045e7ed87d
+		summarizeBy: none
+		sourceColumn: Hora or
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column Topic
+		dataType: int64
+		formatString: 0
+		lineageTag: e300f0ec-c377-417f-8414-dabb433d3372
+		summarizeBy: none
+		sourceColumn: Topic
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Group
+		dataType: int64
+		formatString: 0
+		lineageTag: 2ce465da-b579-4a70-8c1c-e158737cca9e
+		summarizeBy: none
+		sourceColumn: Product_Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Agent
+		dataType: int64
+		formatString: 0
+		lineageTag: d01a2a92-20b2-4841-b6b4-bafc97639d7b
+		summarizeBy: none
+		sourceColumn: ID_Agent
+
+		annotation SummarizationSetBy = Automatic
+
+	column Agent_Group
+		dataType: int64
+		formatString: 0
+		lineageTag: f93d5038-cd4e-4e67-8a79-02bc65b2ed0d
+		summarizeBy: none
+		sourceColumn: Agent_Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: d85b24bc-e377-4e9c-8819-e2b1aadd80fc
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Priority
+		dataType: int64
+		formatString: 0
+		lineageTag: 52c2646f-d6ae-4b96-be9c-7545a31df3fb
+		summarizeBy: none
+		sourceColumn: Priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column Source
+		dataType: int64
+		formatString: 0
+		lineageTag: f9164910-724f-4a02-b58f-cce7f3af79c2
+		summarizeBy: none
+		sourceColumn: Source
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Ticket
+		dataType: int64
+		formatString: 0
+		lineageTag: ce3a58e5-6eb0-44ad-b65f-938cc6f6bf3f
+		summarizeBy: none
+		sourceColumn: ID_Ticket
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hora = FORMAT(dataset_relacional_2025[Hora or], "hh:00")
+		dataType: dateTime
+		formatString: Short Time
+		lineageTag: fb822d2f-af2d-4ed5-b37d-b3fa4aad6966
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"dataset_relacional_2025","TableItemName":"Horas","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column Horas =
+			IF(
+				ISBLANK('dataset_relacional_2025'[Hora]),
+				BLANK(),
+				(INT(('dataset_relacional_2025'[Hora] * 24) / 4) * 4) / 24
+			)
+		dataType: dateTime
+		formatString: Short Time
+		lineageTag: 751396c2-24ee-4e5d-9cec-ea1d50b2d2fa
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "dataset_relacional_2025"
+				          }
+				        },
+				        "Property": "Hora"
+				      }
+				    }
+				  ],
+				  "binningMetadata": {
+				    "binSize": {
+				      "value": 4.0,
+				      "unit": 9
+				    }
+				  }
+				}
+
+		changedProperty = DataType
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"d","Entity":"dataset_relacional_2025"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"d"}},"Property":"Hora"}}],"BinItem":{"Expression":{"Floor":{"Expression":{"Column":{"Expression":{"SourceRef":{"Source":"d"}},"Property":"Hora"}},"Size":4.0,"TimeUnit":7}}}}
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column 'Agent Group Name'
+		dataType: string
+		lineageTag: fae74163-9c4c-4b3a-80e1-e0468c54f5be
+		summarizeBy: none
+		sourceColumn: Agent Group Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agent Name'
+		dataType: string
+		lineageTag: 6b665ef8-46d5-40d3-81a2-b0e80bd200ed
+		summarizeBy: none
+		sourceColumn: Agent Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dataset_relacional_2025 = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\MSI\Downloads\dataset_relacional_2025.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Fecha", type date}, {"Hora", type time}, {"Topic", Int64.Type}, {"Product_Group", Int64.Type}, {"ID_Agent", Int64.Type}, {"Agent_Group", Int64.Type}, {"Country", type text}, {"Priority", Int64.Type}, {"Source", Int64.Type}}),
+				    #"Filas ordenadas" = Table.Sort(#"Tipo cambiado",{{"Fecha", Order.Ascending}}),
+				    #"Índice agregado" = Table.AddIndexColumn(#"Filas ordenadas", "ID_Ticket", 1, 1, Int64.Type),
+				    #"Columnas reordenadas" = Table.ReorderColumns(#"Índice agregado",{"ID_Ticket", "Fecha", "Hora", "Topic", "Product_Group", "ID_Agent", "Agent_Group", "Country", "Priority", "Source"}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas reordenadas",{{"Hora", "Hora or"}}),
+				    #"Consultas combinadas" = Table.NestedJoin(#"Columnas con nombre cambiado", {"Agent_Group"}, #"Agent Group", {"Agent Group"}, "Agent Group", JoinKind.LeftOuter),
+				    #"Se expandió Agent Group" = Table.ExpandTableColumn(#"Consultas combinadas", "Agent Group", {"Agent Group Name"}, {"Agent Group Name"}),
+				    #"Consultas combinadas1" = Table.NestedJoin(#"Se expandió Agent Group", {"ID_Agent"}, Agents, {"ID_Agent"}, "Agents", JoinKind.LeftOuter),
+				    #"Se expandió Agents" = Table.ExpandTableColumn(#"Consultas combinadas1", "Agents", {"Agent Name"}, {"Agent Name"})
+				in
+				    #"Se expandió Agents"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Tech Support Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b1284ebe-ec56-459f-9b97-e4dc9646c059"
+  }
+}

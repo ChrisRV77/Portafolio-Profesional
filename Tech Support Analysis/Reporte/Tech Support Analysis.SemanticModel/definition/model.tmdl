@@ -1,0 +1,36 @@
+model Model
+	culture: es-MX
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-EC
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["dataset_relacional_2025","Agent Group","Agents","Topic","Medidas","dataset_ticket_sla_status","Priority","Source","Status FR","Segmentador","Product Group","Status Resolution"]
+
+annotation PBI_ProTooling = ["CalcGroup","DevMode"]
+
+ref table dataset_relacional_2025
+ref table 'Agent Group'
+ref table Agents
+ref table Topic
+ref table Calendario
+ref table DateTableTemplate_c0d8349f-8e87-436c-8bc1-56710692e3c4
+ref table LocalDateTable_c95830df-0631-41df-bd71-38638c78c3c8
+ref table Medidas
+ref table dataset_ticket_sla_status
+ref table Priority
+ref table Source
+ref table 'Status FR'
+ref table 'Parámetro Contexto'
+ref table Segmentador
+ref table 'Product Group'
+ref table 'Status Resolution'
+ref table 'Grupo de cálculo'
+ref table 'Parámetro Medidas'
+
+ref cultureInfo es-MX
+

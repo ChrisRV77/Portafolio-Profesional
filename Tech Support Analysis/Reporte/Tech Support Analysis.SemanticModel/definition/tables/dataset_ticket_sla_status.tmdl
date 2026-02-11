@@ -1,0 +1,72 @@
+table dataset_ticket_sla_status
+	lineageTag: 0e3b65c4-c9c4-48d5-ac5c-7f080c25c5c7
+
+	column ID_ticket
+		dataType: int64
+		formatString: 0
+		lineageTag: 97d6a9da-7d0a-41c2-9d04-0dffa6632241
+		summarizeBy: none
+		sourceColumn: ID_ticket
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: int64
+		formatString: 0
+		lineageTag: d2fc5487-1d98-4f3f-9f85-6d75f3f62c9f
+		summarizeBy: sum
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column First_Response
+		dataType: int64
+		formatString: 0
+		lineageTag: 8abb2a45-0e33-4fe8-985d-bd5e0ae35e0f
+		summarizeBy: none
+		sourceColumn: First_Response
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resolution
+		dataType: int64
+		formatString: 0
+		lineageTag: d94e27a5-190f-4f40-abad-28d8c0672824
+		summarizeBy: none
+		sourceColumn: Resolution
+
+		annotation SummarizationSetBy = Automatic
+
+	column Survey
+		dataType: int64
+		formatString: 0
+		lineageTag: a01bd606-370e-4208-a465-67784b947b67
+		summarizeBy: sum
+		sourceColumn: Survey
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dataset_ticket_sla_status = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\MSI\Downloads\dataset_ticket_sla_status.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID_ticket", Int64.Type}, {"Status", Int64.Type}, {"First_Response", Int64.Type}, {"Resolution", Int64.Type}, {"Survey", Int64.Type}}),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Tipo cambiado",9,0,Replacer.ReplaceValue,{"Resolution"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Valor reemplazado",{{"Resolution", Int64.Type}}),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Tipo cambiado1",9,0,Replacer.ReplaceValue,{"First_Response"}),
+				    #"Tipo cambiado2" = Table.TransformColumnTypes(#"Valor reemplazado1",{{"First_Response", Int64.Type}}),
+				    #"Valor reemplazado2" = Table.ReplaceValue(#"Tipo cambiado2",0,3,Replacer.ReplaceValue,{"Survey"}),
+				    #"Columna condicional agregada" = Table.AddColumn(#"Valor reemplazado2", "Survey_2", each if [Status] = 9 then null else [Survey]),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Columna condicional agregada",{"Survey"}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas quitadas",{{"Survey_2", "Survey"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

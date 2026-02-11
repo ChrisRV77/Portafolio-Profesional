@@ -1,0 +1,27 @@
+table 'Grupo de cálculo'
+	lineageTag: baa16cd8-d456-48b8-8a60-4e8df5e47951
+
+	calculationGroup
+
+		calculationItem 'AV review' = SELECTEDMEASURE()
+
+		calculationItem 'Elemento de cálculo 2' = SELECTEDMEASURE()
+
+	column 'Columna de grupo de cálculo'
+		dataType: string
+		lineageTag: faf548b1-4fde-427f-b782-c09965b8bc9f
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		formatString: 0
+		lineageTag: fb7c4869-3bc9-46df-9f2c-f2120850a410
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

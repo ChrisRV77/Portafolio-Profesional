@@ -1,0 +1,62 @@
+table 'Parámetro Contexto'
+	lineageTag: c5736fdf-e89e-4589-90cb-3b85f415cd9e
+
+	column Parámetro
+		lineageTag: a7949913-fcfd-4bd4-8372-1441c6fda0c6
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parámetro Orden'
+
+		relatedColumnDetails
+			groupByColumn: 'Parámetro Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parámetro Campos'
+		isHidden
+		lineageTag: cac511a6-3052-42ad-9393-861dd11390f7
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parámetro Orden'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parámetro Orden'
+		isHidden
+		formatString: 0
+		lineageTag: efaa7774-133a-44fb-a8fa-a03672a90dd8
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_par
+		lineageTag: 57b116cc-4c49-419e-9d93-75f14ed9af16
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Parámetro Contexto' = calculated
+		mode: import
+		source =
+				{
+				    ("Day Type", NAMEOF('Calendario'[kind of weekday]), 0, "CT"),
+				    ("Source", NAMEOF('Source'[Source]), 1, "CT"),
+				    ("Priority", NAMEOF('Priority'[Priority]), 2, "CT"),
+				    ("Day Type ", NAMEOF('Calendario'[kind of weekday 2]), 0, "CT2"),
+				    ("Source ", NAMEOF('Source'[Source 2]), 1, "CT2"),
+				    ("Priority ", NAMEOF('Priority'[Priority 2]), 2, "CT2"),
+				    ("Status", NAMEOF('Status FR'[Status]), 5, "FR"),
+				    ("Status", NAMEOF('Status Resolution'[Status]), 6, "FR"),
+				    ("Survey", NAMEOF(dataset_ticket_sla_status[Survey]), 7,"S")
+				}
+
+	annotation PBI_Id = 52ea2e85016444039645004ae0a70b69
+

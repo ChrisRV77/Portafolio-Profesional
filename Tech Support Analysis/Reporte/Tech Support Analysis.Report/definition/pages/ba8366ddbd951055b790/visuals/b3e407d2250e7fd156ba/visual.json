@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "b3e407d2250e7fd156ba",
+  "position": {
+    "x": 872.37322515212986,
+    "y": 68.342602892102335,
+    "z": 5000,
+    "height": 111.22423607930381,
+    "width": 184.92704311980631,
+    "tabOrder": 0
+  },
+  "visualGroup": {
+    "displayName": "Tarjeta Closed Tickets",
+    "groupMode": "ScaleMode"
+  }
+}

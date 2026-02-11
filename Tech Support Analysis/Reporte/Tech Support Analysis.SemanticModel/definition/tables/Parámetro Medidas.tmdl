@@ -1,0 +1,48 @@
+table 'Parámetro Medidas'
+	lineageTag: 7240e674-8bc4-45a8-94fc-72ea5c5b2336
+
+	column Parámetro
+		lineageTag: 0750254f-9ff6-4167-99c6-328798adb1ed
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parámetro Orden'
+
+		relatedColumnDetails
+			groupByColumn: 'Parámetro Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parámetro Campos'
+		isHidden
+		lineageTag: 9b876381-3cc7-468b-8e18-79660450c3c9
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parámetro Orden'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parámetro Orden'
+		isHidden
+		formatString: 0
+		lineageTag: 2236035e-d9cc-4285-b98a-38f42e815deb
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Parámetro Medidas' = calculated
+		mode: import
+		source =
+				{
+				    ("Closed Tickets", NAMEOF('Medidas'[Closed Tickets]), 0),
+				    ("Total tickets", NAMEOF('Medidas'[Total tickets]), 1)
+				}
+
+	annotation PBI_Id = 3fac65c11ef3483185d6e5c7f9bf9f21
+

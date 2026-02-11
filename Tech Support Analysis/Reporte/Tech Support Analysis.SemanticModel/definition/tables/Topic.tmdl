@@ -1,0 +1,34 @@
+table Topic
+	lineageTag: 6cc24f1e-f431-4ee3-b299-7b681aed7367
+
+	column ID_Topic
+		dataType: int64
+		formatString: 0
+		lineageTag: f8e1182b-49dc-44a9-9aac-f9121c743c3c
+		summarizeBy: none
+		sourceColumn: ID_Topic
+
+		annotation SummarizationSetBy = Automatic
+
+	column Topic
+		dataType: string
+		lineageTag: 66009295-378c-4dcd-93ed-b14dc719a842
+		summarizeBy: none
+		sourceColumn: Topic
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Topic = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\MSI\Downloads\dim_topic.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID_Topic", Int64.Type}, {"Topic", type text}})
+				in
+				    #"Tipo cambiado"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

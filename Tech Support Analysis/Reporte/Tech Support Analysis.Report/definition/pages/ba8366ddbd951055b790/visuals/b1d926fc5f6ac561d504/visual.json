@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "b1d926fc5f6ac561d504",
+  "position": {
+    "x": 232.27272727272725,
+    "y": 69.090909090909079,
+    "z": 2000,
+    "height": 109.09090909090908,
+    "width": 185.90909090909091,
+    "tabOrder": 5000
+  },
+  "visualGroup": {
+    "displayName": "Tarjeta First Response",
+    "groupMode": "ScaleMode"
+  }
+}

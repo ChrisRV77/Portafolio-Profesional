@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "55d2a8706991d1858177",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 10000,
+    "height": 720.60698027314106,
+    "width": 1280,
+    "tabOrder": 10000
+  },
+  "visualGroup": {
+    "displayName": "Pantalla de Información",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

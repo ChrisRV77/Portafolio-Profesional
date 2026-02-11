@@ -1,0 +1,96 @@
+table Medidas
+	lineageTag: e7f21514-3446-40ac-bf11-acedb357d04b
+
+	measure 'Total tickets' = COUNTROWS(dataset_relacional_2025)
+		formatString: 0
+		lineageTag: 1be5fbe1-d7d9-4830-b6a7-7e47f8e42f3a
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'First Response %' =
+			
+			VAR first_response = CALCULATE([Total tickets], dataset_ticket_sla_status[First_Response] =0)
+			
+			RETURN DIVIDE(first_response, [Total tickets],0)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 7b5a5cdf-5413-4597-8a86-388e757e2b33
+
+	measure 'Resolution %' =
+			
+			VAR first_response = CALCULATE([Total tickets], dataset_ticket_sla_status[Resolution] =0)
+			
+			RETURN DIVIDE(first_response, [Total tickets],0)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 68c2d2fb-ece8-4a7a-a70c-5b51cce11720
+
+	measure 'AV Reviews' = AVERAGEX(FILTER(dataset_ticket_sla_status, dataset_ticket_sla_status[Status] = 1), dataset_ticket_sla_status[Survey])
+		displayFolder: Reviews
+		lineageTag: 4fa5c8b8-2314-4d9d-b705-9630352360fa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Closed Tickets' = CALCULATE([Total tickets], dataset_ticket_sla_status[Status] = 1)
+		formatString: 0
+		lineageTag: 980f00e2-9c3f-4926-aebf-7a2a419c21be
+
+	measure 'First Response' = CALCULATE([Total tickets], dataset_ticket_sla_status[First_Response] <> 9)
+		formatString: 0
+		lineageTag: d7dc4572-73c7-43bb-80b2-8386534ed138
+
+	measure 'Status Open' = ```
+			
+			VAR open_status = CALCULATE([Total tickets], dataset_ticket_sla_status[Status] = 0)
+			VAR total_tickets = [Total tickets]
+			VAR porcentaje_open_status = 
+			    FORMAT(
+			        DIVIDE(open_status, total_tickets, 0),
+			        "0.00%"
+			    )
+			VAR open_status_format = FORMAT(open_status, "#,##")
+			
+			RETURN  porcentaje_open_status & " | " & open_status_format
+			```
+		lineageTag: 95f115f4-ace4-410b-a010-458a393820c5
+
+	measure '⭐ 1' = CALCULATE([Total tickets], dataset_ticket_sla_status[Status] = 1, dataset_ticket_sla_status[Survey] = 1)
+		formatString: 0
+		displayFolder: Reviews
+		lineageTag: 992ee189-db75-422a-bf1f-c77bc787aed1
+
+	measure '⭐ 2' = CALCULATE([Total tickets], dataset_ticket_sla_status[Status] = 1, dataset_ticket_sla_status[Survey] = 2)
+		formatString: 0
+		displayFolder: Reviews
+		lineageTag: 2379859e-b797-4787-a2c4-29f73548cdad
+
+	measure '⭐ 3' = CALCULATE([Total tickets], dataset_ticket_sla_status[Status] = 1, dataset_ticket_sla_status[Survey] = 3)
+		formatString: 0
+		displayFolder: Reviews
+		lineageTag: 95fca255-1412-4c01-bbc4-99b3f3b6a609
+
+	measure '⭐ 4' = CALCULATE([Total tickets], dataset_ticket_sla_status[Status] = 1, dataset_ticket_sla_status[Survey] = 4)
+		formatString: 0
+		displayFolder: Reviews
+		lineageTag: 6e28678b-f983-41c0-9372-382397b7e566
+
+	measure '⭐ 5' = CALCULATE([Total tickets], dataset_ticket_sla_status[Status] = 1, dataset_ticket_sla_status[Survey] = 5)
+		formatString: 0
+		displayFolder: Reviews
+		lineageTag: c2d29255-7a65-489e-b2a9-99b6baacea68
+
+	measure 'Unrated Tickets' = COUNTBLANK(dataset_ticket_sla_status[Survey])
+		formatString: 0
+		displayFolder: Reviews
+		lineageTag: 9c18adea-9376-4398-9291-ce6dfb85d6e9
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+

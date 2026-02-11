@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "8fda72ce8f43f7d54df6",
+  "position": {
+    "x": 448.63636363636363,
+    "y": 69.090909090909079,
+    "z": 3000,
+    "height": 110.90909090909091,
+    "width": 181.81818181818181,
+    "tabOrder": 6000
+  },
+  "visualGroup": {
+    "displayName": "Tarjeta Resolution",
+    "groupMode": "ScaleMode"
+  }
+}

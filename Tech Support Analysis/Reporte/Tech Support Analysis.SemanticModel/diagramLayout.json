@@ -1,0 +1,237 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 284,
+            "y": 0
+          },
+          "nodeIndex": "dataset_relacional_2025",
+          "nodeLineageTag": "224a2e8e-03ee-4fc5-bec1-3361d9e7c762",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 716.529507963898,
+            "y": 471.12478139526604
+          },
+          "nodeIndex": "Agent Group",
+          "nodeLineageTag": "71ddf7ea-89d1-4e3b-8fc7-c24a63b8d8e2",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 338.44012856186913
+          },
+          "nodeIndex": "Calendario",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1218.1652597247096,
+            "y": 274.25294701466959
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "e7f21514-3446-40ac-bf11-acedb357d04b",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 52.224718193118633,
+            "y": 706.91816763199154
+          },
+          "nodeIndex": "dataset_ticket_sla_status",
+          "nodeLineageTag": "0e3b65c4-c9c4-48d5-ac5c-7f080c25c5c7",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 480.57905500877337,
+            "y": 750.37834713891084
+          },
+          "nodeIndex": "Source",
+          "nodeLineageTag": "2244d908-c60d-4420-a4fd-1103efe1f366",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 764.63459119527454,
+            "y": 747.23991876218986
+          },
+          "nodeIndex": "Priority",
+          "nodeLineageTag": "5fbb3bf1-71e8-43ae-a916-d40405c7fb7f",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1185.0579250358041,
+            "y": 520.49080766681891
+          },
+          "nodeIndex": "Segmentador",
+          "nodeLineageTag": "5e65f995-9bf0-4e53-9d82-bf42a81db774",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 934.7838626021221,
+            "y": 910.80304603321258
+          },
+          "nodeIndex": "Product Group",
+          "nodeLineageTag": "e7f9de48-d4d1-4e70-9bbc-6662fc516c63",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 479.60034180229144,
+            "y": 917.79358251106851
+          },
+          "nodeIndex": "Status FR",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 33.603676029307962,
+            "y": 1080.1988012314137
+          },
+          "nodeIndex": "Status Resolution",
+          "nodeLineageTag": "12028634-f213-4a2c-ac33-12bc63e09cad",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 1786.1652597247096,
+            "y": 540.09940061570683
+          },
+          "nodeIndex": "Grupo de cálculo",
+          "nodeLineageTag": "baa16cd8-d456-48b8-8a60-4e8df5e47951",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 84
+          },
+          "nodeIndex": "Agents",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2070.1652597247094,
+            "y": 528.09940061570683
+          },
+          "nodeIndex": "Parámetro Medidas",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1502.1652597247096,
+            "y": 446.89679125553425
+          },
+          "nodeIndex": "Parámetro Contexto",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 934.16525972470959,
+            "y": 306.49577917412853
+          },
+          "nodeIndex": "Topic",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2354.1652597247094,
+            "y": 528.09940061570683
+          },
+          "nodeIndex": "Parámetro",
+          "nodeLineageTag": "93723aaa-d817-4ec7-92db-6427960b6049",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 44.905697313104064,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

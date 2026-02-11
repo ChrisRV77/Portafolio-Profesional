@@ -1,0 +1,75 @@
+table Calendario
+	lineageTag: c7e6d3b1-0838-40da-b3b5-0b9c5421320d
+
+	column Date
+		formatString: General Date
+		lineageTag: ea5d6686-1e76-4872-b87a-79be29feb439
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variación
+			isDefault
+			relationship: 51f3e5ab-79f0-4103-a46d-f0cf9f210909
+			defaultHierarchy: LocalDateTable_c95830df-0631-41df-bd71-38638c78c3c8.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day = DAY(Calendario[Date])
+		formatString: 0
+		lineageTag: 76e13a92-b4dc-4ddc-aa4b-0ff0b1c2a4b3
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month = MONTH(Calendario[Date])
+		formatString: 0
+		lineageTag: 7aac97f8-09b1-48e3-8e54-b1abf1345146
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name' = FORMAT(Calendario[Date], "mmm")
+		lineageTag: 971bc711-f0b6-45bf-a1ca-944dcd758e93
+		summarizeBy: none
+		sortByColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year = YEAR(Calendario[Date])
+		formatString: 0
+		lineageTag: c3eb2c6f-696c-467f-beee-1b2ea9f8217d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'kind of weekday' =
+			
+			Var weekday_var = WEEKDAY(Calendario[Date], 2)
+			RETURN
+			    SWITCH(TRUE(),
+			    weekday_var < 6, "workday",
+			    "weekend")
+		lineageTag: 871dc1cd-99cb-4634-b6fd-5dd179c67548
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'kind of weekday 2' =
+			
+			Var weekday_var = WEEKDAY(Calendario[Date], 2)
+			RETURN
+			    SWITCH(TRUE(),
+			    weekday_var < 6, "workday",
+			    "weekend")
+		lineageTag: ff0a3474-a53e-4bba-97b9-84effcfe5c88
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source = CALENDAR(MIN(dataset_relacional_2025[Fecha]), MAX(dataset_relacional_2025[Fecha]))
+
+	annotation PBI_Id = 1367c070d4ed48a8a261cd1268801789
+

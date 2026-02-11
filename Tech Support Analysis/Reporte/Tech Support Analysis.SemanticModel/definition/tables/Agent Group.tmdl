@@ -1,0 +1,31 @@
+table 'Agent Group'
+	lineageTag: 71ddf7ea-89d1-4e3b-8fc7-c24a63b8d8e2
+
+	column 'Agent Group'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7cd20629-ad06-4caf-9594-71259ed26ea0
+		summarizeBy: none
+		sourceColumn: Agent Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agent Group Name'
+		dataType: string
+		lineageTag: 41ff8be9-338f-44db-86fa-63059a694db5
+		summarizeBy: none
+		sourceColumn: Agent Group Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Agent Group' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUTIsLlHwycxLVYrViVYyAgoYwQViAQ==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Agent Group" = _t, #"Agent Group Name" = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Agent Group", Int64.Type}, {"Agent Group Name", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

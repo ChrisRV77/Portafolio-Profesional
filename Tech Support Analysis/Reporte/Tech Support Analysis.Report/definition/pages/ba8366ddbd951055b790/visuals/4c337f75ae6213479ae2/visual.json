@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "4c337f75ae6213479ae2",
+  "position": {
+    "x": 21.1175898931001,
+    "y": 69.285714285714292,
+    "z": 1000,
+    "height": 109.38775510204081,
+    "width": 181.02526724975706,
+    "tabOrder": 1000
+  },
+  "visualGroup": {
+    "displayName": "Tarjeta Created Tickets",
+    "groupMode": "ScaleMode"
+  }
+}

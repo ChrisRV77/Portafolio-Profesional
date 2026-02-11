@@ -1,0 +1,51 @@
+relationship AutoDetected_c5cbebdb-aa70-4bb4-ab36-1ad9147bf8cf
+	fromColumn: dataset_relacional_2025.Agent_Group
+	toColumn: 'Agent Group'.'Agent Group'
+
+relationship AutoDetected_a45ac089-d1d8-417d-abad-4178380f8d5a
+	fromColumn: dataset_relacional_2025.ID_Agent
+	toColumn: Agents.ID_Agent
+
+relationship AutoDetected_28300ac9-7b94-4761-b8a3-ede97b4c5bed
+	fromColumn: dataset_relacional_2025.Topic
+	toColumn: Topic.ID_Topic
+
+relationship 51f3e5ab-79f0-4103-a46d-f0cf9f210909
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendario.Date
+	toColumn: LocalDateTable_c95830df-0631-41df-bd71-38638c78c3c8.Date
+
+relationship 3ac3568b-b3d8-0d24-9cc7-db0705b5025a
+	fromColumn: dataset_relacional_2025.Fecha
+	toColumn: Calendario.Date
+
+relationship b84165a4-00ad-0df1-0b05-4a9487116b4c
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dataset_ticket_sla_status.ID_ticket
+	toColumn: dataset_relacional_2025.ID_Ticket
+
+relationship AutoDetected_c73f1fe5-22f8-43b2-b037-5c039928d4f8
+	fromColumn: dataset_relacional_2025.Priority
+	toColumn: Priority.ID_Priority
+
+relationship AutoDetected_73b3e0d6-3edd-4c78-9db8-218700eb9dab
+	fromColumn: dataset_relacional_2025.Source
+	toColumn: Source.ID_Source
+
+relationship AutoDetected_1ef0795e-d91e-4b6b-ad52-5b4d4216c1b7
+	fromColumn: dataset_relacional_2025.Product_Group
+	toColumn: 'Product Group'.ID_productgroup
+
+relationship 1f2aa656-3db1-92e3-029c-fe4e9837a4ed
+	fromColumn: dataset_ticket_sla_status.Resolution
+	toColumn: 'Status Resolution'.ID_Status
+
+relationship 9305dd7e-6a79-725a-06e3-9498f99f7077
+	fromColumn: dataset_ticket_sla_status.First_Response
+	toColumn: 'Status FR'.ID_Status
+
+relationship 9929765c-3e11-6102-5efa-36b64839f63c
+	fromColumn: 'Parámetro Contexto'.ID_par
+	toColumn: Segmentador.ID_seg
+

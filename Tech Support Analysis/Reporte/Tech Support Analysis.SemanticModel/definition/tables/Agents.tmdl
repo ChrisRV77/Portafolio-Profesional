@@ -1,0 +1,35 @@
+table Agents
+	lineageTag: 3ef3fd53-618f-4898-8356-429d1265279a
+
+	column ID_Agent
+		dataType: int64
+		formatString: 0
+		lineageTag: f4047b7a-cd37-454f-b698-60959e34af89
+		summarizeBy: none
+		sourceColumn: ID_Agent
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agent Name'
+		dataType: string
+		lineageTag: 87208d30-9177-4bdb-9317-18eb8224623c
+		summarizeBy: none
+		sourceColumn: Agent Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Agents = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\MSI\Downloads\dim_agents.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID_Agent", Int64.Type}, {"Name", type text}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"Name", "Agent Name"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

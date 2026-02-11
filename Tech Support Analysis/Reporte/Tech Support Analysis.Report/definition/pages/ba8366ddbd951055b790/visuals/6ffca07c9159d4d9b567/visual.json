@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "6ffca07c9159d4d9b567",
+  "position": {
+    "x": 660.83333333333337,
+    "y": 69.166666666666671,
+    "z": 4000,
+    "height": 111.59722222222223,
+    "width": 181.73611111111111,
+    "tabOrder": 4000
+  },
+  "visualGroup": {
+    "displayName": "Tarjeta Survey",
+    "groupMode": "ScaleMode"
+  }
+}

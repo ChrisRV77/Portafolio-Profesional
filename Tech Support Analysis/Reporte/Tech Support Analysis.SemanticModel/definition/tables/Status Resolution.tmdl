@@ -1,0 +1,35 @@
+table 'Status Resolution'
+	lineageTag: 12028634-f213-4a2c-ac33-12bc63e09cad
+
+	column ID_Status
+		dataType: int64
+		lineageTag: 7b919675-f1db-42e8-a360-e16c8c864ebd
+		summarizeBy: none
+		sourceColumn: ID_Status
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Status
+		dataType: string
+		lineageTag: 42b67bf9-e5bd-42bf-9fdc-dc3c4c686458
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Status Resolution' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlDSUSrPLMnIzFMI9nFUitWJVjIECgHZCmGZ+TmJJakpYEFLoKBffl6qUmwsAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [ID_Status = _t, Status = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"ID_Status", Int64.Type}, {"Status", type text}}),
+				    #"Filas filtradas" = Table.SelectRows(#"Tipo cambiado", each ([ID_Status] <> 9))
+				in
+				    #"Filas filtradas"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

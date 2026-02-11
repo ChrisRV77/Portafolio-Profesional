@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "7ec2e3b9096ea3b5db34",
+  "position": {
+    "x": 868.33333333333337,
+    "y": 260,
+    "z": 6000,
+    "height": 236.66666666666663,
+    "width": 397.0512820512821,
+    "tabOrder": 24001
+  },
+  "visualGroup": {
+    "displayName": "Visual Mapa",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "2c599beef8dcf4ba21a5"
+}

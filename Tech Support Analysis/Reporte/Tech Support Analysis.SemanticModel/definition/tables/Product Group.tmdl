@@ -1,0 +1,31 @@
+table 'Product Group'
+	lineageTag: e7f9de48-d4d1-4e70-9bbc-6662fc516c63
+
+	column ID_productgroup
+		dataType: int64
+		formatString: 0
+		lineageTag: f45a7811-ce63-4cf7-8fff-01f6a1b6f7c1
+		summarizeBy: none
+		sourceColumn: ID_productgroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product group'
+		dataType: string
+		lineageTag: 05a49987-293c-4431-b11f-c73505e48ec5
+		summarizeBy: none
+		sourceColumn: Product group
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Product Group' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUQrOTyspTyxKVYrViVYyAgq4pJal5uQX5KbmlYDFjIFizvl5xaU5JZl56QrBqUVlmcmpxWA5E6Ccf0lGapFSbCwA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [ID_productgroup = _t, #"Product group" = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"ID_productgroup", Int64.Type}, {"Product group", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "f057c76a0ef12281ee49",
+  "position": {
+    "x": 21.25,
+    "y": 15.416666666666657,
+    "z": 1000,
+    "height": 222.5,
+    "width": 396.25,
+    "tabOrder": 15000
+  },
+  "visualGroup": {
+    "displayName": "Visual Piechart Total ticket",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "2c599beef8dcf4ba21a5"
+}

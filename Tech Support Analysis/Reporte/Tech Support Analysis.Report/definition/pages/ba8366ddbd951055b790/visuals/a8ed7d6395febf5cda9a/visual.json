@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "a8ed7d6395febf5cda9a",
+  "position": {
+    "x": 445,
+    "y": 260,
+    "z": 5000,
+    "height": 236.66666666666669,
+    "width": 396.66666666666674,
+    "tabOrder": 18000
+  },
+  "visualGroup": {
+    "displayName": "Visual Bar por Hora",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "2c599beef8dcf4ba21a5"
+}
