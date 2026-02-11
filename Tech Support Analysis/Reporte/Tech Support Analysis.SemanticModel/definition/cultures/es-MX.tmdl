@@ -4761,116 +4761,6 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "segmentador": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Segmentador"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "segmentador": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "segmentador.segmento": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Segmentador",
-			          "ConceptualProperty": "Segmento"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "segmento": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "segmentador.ID_seg": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Segmentador",
-			          "ConceptualProperty": "ID_seg"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ID seg": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ID_seg": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "identification seg": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "identity seg": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "identifier seg": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "credential seg": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "segmentador.índice": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Segmentador",
-			          "ConceptualProperty": "Índice"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "índice": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "product_group": {
 			      "Definition": {
 			        "Binding": {
@@ -5170,6 +5060,27 @@ cultureInfo es-MX
 			        }
 			      ],
 			      "NameType": "Name"
+			    },
+			    "calendario.kind_of_weekday_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "kind of weekday 2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Day Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -5249,105 +5160,6 @@ cultureInfo es-MX
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "product_groups_have_ID_productgroups"
-			        }
-			      ]
-			    },
-			    "segmentador_has_índice": {
-			      "Binding": {
-			        "ConceptualEntity": "Segmentador"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "segmentador": {
-			          "Target": {
-			            "Entity": "segmentador"
-			          }
-			        },
-			        "segmentador.índice": {
-			          "Target": {
-			            "Entity": "segmentador.índice"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "segmentador"
-			            },
-			            "Object": {
-			              "Role": "segmentador.índice"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "segmentadors_have_índices"
-			        }
-			      ]
-			    },
-			    "segmentador_has_ID_seg": {
-			      "Binding": {
-			        "ConceptualEntity": "Segmentador"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "segmentador": {
-			          "Target": {
-			            "Entity": "segmentador"
-			          }
-			        },
-			        "segmentador.ID_seg": {
-			          "Target": {
-			            "Entity": "segmentador.ID_seg"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "segmentador"
-			            },
-			            "Object": {
-			              "Role": "segmentador.ID_seg"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "segmentadors_have_ID_segs"
-			        }
-			      ]
-			    },
-			    "segmentador_has_segmento": {
-			      "Binding": {
-			        "ConceptualEntity": "Segmentador"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "segmentador": {
-			          "Target": {
-			            "Entity": "segmentador"
-			          }
-			        },
-			        "segmentador.segmento": {
-			          "Target": {
-			            "Entity": "segmentador.segmento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "segmentador"
-			            },
-			            "Object": {
-			              "Role": "segmentador.segmento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "segmentadors_have_segmentos"
 			        }
 			      ]
 			    },

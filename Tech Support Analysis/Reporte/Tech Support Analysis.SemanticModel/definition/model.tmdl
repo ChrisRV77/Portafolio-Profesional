@@ -9,7 +9,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["dataset_relacional_2025","Agent Group","Agents","Topic","Medidas","dataset_ticket_sla_status","Priority","Source","Status FR","Segmentador","Product Group","Status Resolution"]
+annotation PBI_QueryOrder = ["dataset_relacional_2025","Agent Group","Agents","Topic","Medidas","dataset_ticket_sla_status","Priority","Source","Status FR","Product Group","Status Resolution"]
 
 annotation PBI_ProTooling = ["CalcGroup","DevMode"]
 
@@ -26,10 +26,8 @@ ref table Priority
 ref table Source
 ref table 'Status FR'
 ref table 'Parámetro Contexto'
-ref table Segmentador
 ref table 'Product Group'
 ref table 'Status Resolution'
-ref table 'Grupo de cálculo'
 ref table 'Parámetro Medidas'
 
 ref cultureInfo es-MX

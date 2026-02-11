@@ -45,7 +45,3 @@ relationship 9305dd7e-6a79-725a-06e3-9498f99f7077
 	fromColumn: dataset_ticket_sla_status.First_Response
 	toColumn: 'Status FR'.ID_Status
 
-relationship 9929765c-3e11-6102-5efa-36b64839f63c
-	fromColumn: 'Parámetro Contexto'.ID_par
-	toColumn: Segmentador.ID_seg
-
