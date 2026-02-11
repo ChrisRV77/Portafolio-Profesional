@@ -123,4 +123,4 @@ La información presentada tiene fines demostrativos y técnicos, por lo que cua
 
 Puedes ver el reporte en el siguiente link: 
 
-[![Static Badge](https://img.shields.io/badge/Indicadores_Recursos_Humanos-yellow?style=for-the-badge&label=Revisalo_Aquí&labelColor=white&color=yellow)](https://app.powerbi.com/view?r=eyJrIjoiNjIwNjVmNGUtNGE2ZC00MzNmLTk4NDAtMDc2YWU1ZGIxY2QzIiwidCI6ImI3YWY4Y2FmLTgzZDgtNDY0NC04NWFlLTMxN2M1NDUyMjNjMSIsImMiOjR9)
+[![Static Badge](https://img.shields.io/badge/TECH_SUPPORT_Analysis-yellow?style=for-the-badge&label=Revisalo%20Aquí&labelColor=white&color=yellow)](https://app.powerbi.com/view?r=eyJrIjoiNjIwNjVmNGUtNGE2ZC00MzNmLTk4NDAtMDc2YWU1ZGIxY2QzIiwidCI6ImI3YWY4Y2FmLTgzZDgtNDY0NC04NWFlLTMxN2M1NDUyMjNjMSIsImMiOjR9)
