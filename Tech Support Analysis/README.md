@@ -4,6 +4,12 @@ El presente reporte ha sido elaborado utilizando una base de datos generada medi
 
 A continuación presento la explicación estructurada del dashboard:
 
+![reporte](https://github.com/ChrisRV77/Portafolio-Profesional/blob/main/Tech%20Support%20Analysis/Imagenes/Reporte.png)
+
+
+
+![modelo relacional](https://github.com/ChrisRV77/Portafolio-Profesional/blob/main/Tech%20Support%20Analysis/Imagenes/Modelo%20Relacional.png)
+
 
 
 ### Encabezado: **Tech Support Analysis**
