@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "a75e67bd73bf9e4f463e",
+  "position": {
+    "x": 1188.3333333333333,
+    "y": 55,
+    "z": 3000,
+    "height": 125,
+    "width": 298.33333333333337,
+    "tabOrder": 2000
+  },
+  "visualGroup": {
+    "displayName": "Informacion reseteo",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "963594062a6a99d5d638"
+}

@@ -1,0 +1,56 @@
+table Costos_Ganancia
+	lineageTag: 204b055f-a386-473d-89a0-76f13298cc30
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: be6c306d-cb92-4cd0-84d5-9436b4e9154a
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Id Detalle'
+		dataType: string
+		lineageTag: b76af494-78d8-4a8f-805f-b0be4dab5f5e
+		summarizeBy: none
+		sourceColumn: Id Detalle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Costos
+		dataType: int64
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 6ee1ba50-c274-4c9e-8d3d-0b14b077a867
+		summarizeBy: sum
+		sourceColumn: Costos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ganancias
+		dataType: int64
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: f55e4c02-0b26-435d-8291-98a89809f4e8
+		summarizeBy: sum
+		sourceColumn: Ganancias
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Costos_Ganancia = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\MSI\Documents\GitHub\Portafolio-Profesional\Marketing Campaign Analysis\Data\fact_marketing_costos_diarios_2025.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Fecha", type date}, {"Campaign", type text}, {"Channel", type text}, {"City", type text}, {"Device", type text}, {"Ads", type text}, {"Costos", Int64.Type}, {"Ganancias", Int64.Type}}),
+				    #"Columnas combinadas" = Table.CombineColumns(#"Tipo cambiado",{"Campaign", "Channel", "City", "Device", "Ads"},Combiner.CombineTextByDelimiter("-", QuoteStyle.None),"Combinada"),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas combinadas",{{"Combinada", "Id Detalle"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

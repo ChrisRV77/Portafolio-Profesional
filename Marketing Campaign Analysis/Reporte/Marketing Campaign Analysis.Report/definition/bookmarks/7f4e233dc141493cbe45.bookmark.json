@@ -1,0 +1,2456 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
+  "displayName": "Información on",
+  "name": "7f4e233dc141493cbe45",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "963594062a6a99d5d638",
+      "0774dc0f67e94dd6300f",
+      "a1c306f5dbf912e8ba72",
+      "6a1731dacaef5300d1bf",
+      "1bd0fde55409f662dbc8",
+      "a75e67bd73bf9e4f463e",
+      "0a368240b82d5f1e62a2",
+      "13beb7d26f6594a68e1c"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "f183f6d2c48ffca17762",
+    "sections": {
+      "f183f6d2c48ffca17762": {
+        "visualContainers": {
+          "99e1005beec6ab90baf8": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "669755a4a13bbcd3702b": {
+            "singleVisual": {
+              "visualType": "pageNavigator",
+              "objects": {}
+            }
+          },
+          "06bd68da70beca5e5e09": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "02bce4c06831f40b2727",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Between'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "dd6fea96fa25f5be5f7b": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "8ddea1655fb079c9b5f9": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7cd53f3e89674d419e52",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Channel"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Channel"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Channel"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "9686b4f44815c4ddf325": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "390a85332a84097f2c1c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Campaign"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Campaign"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Campaign"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "1ea6bb4470162e67c85e": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "f3175c1ff7a189ffe8bc": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2912b2113721b498d617",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Impresiones"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bc4ef0e235fdb06464ee",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Clicks"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1521184c2265c0d38b71",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Conversiones"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "870db01b147beca94b1a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Costos"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4b437969f32b88538ab5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Profit"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Impresiones"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "cc0558d9dad207ada6a8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0afe019d437f37ed3db0",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "868e1bb7cae0a5a8bfc0",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Trimestre"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3ce9a3629099988f33f0",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "71be0fac17532e3ad22a",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Día"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "204e1e35bc8fe480217b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Impresiones"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Trimestre"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Día"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "bf5e64300e43963176d5": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "439841b28ffb26363953",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "01d6e0189530b95815df",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Trimestre"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cf46034a1dac446fcd0a",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3351cce0a22846dc91df",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Día"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c7c6be661be145734348",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Clicks"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Trimestre"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Día"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "571ac3b44b0b36e1650b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "02589ff2f31d2838fc70",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1e43e58fb4ca34e0e619",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Trimestre"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "072994b34b85b083209f",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dd98f72236b6324358c4",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Día"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ea01753d179c011d1067",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Conversiones"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Trimestre"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Día"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "b506babb6e6fdc62b9fd": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "cdcbe098ae42e59f047d",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "50ddf1c13816c76031e5",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Trimestre"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "070f7c87760fe3d1abd1",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "25cffa66fdd03aaad4d9",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Día"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5d9a63ea2aa4e5170f9b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Costos"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Trimestre"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Día"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "adb706060bafa4ba4f75": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0fcb81dce27fc3e7d92e",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "02911b7ba470f89b4047",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Trimestre"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "83c5a37a143427ae4547",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "24c73c0e47806b386324",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Día"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "17f6477fe94027ad99ef",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Profit"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Trimestre"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Calendario"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Fecha"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Día"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "6f317fee2ff57d28148d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e0fa61f02d470b5bff31",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2ff106ac84c76defe6a2",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Device"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f0239fe12cdcb8ecea53",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Ads"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5a5bec05ff68f622d6c4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Impresiones"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "donutChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Impresiones"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "183eb44726b6a31443bb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e12e0d2a6be24555ab28",
+                  "type": "Advanced",
+                  "expression": {
+                    "Arithmetic": {
+                      "Left": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Medidas"
+                            }
+                          },
+                          "Property": "Clicks"
+                        }
+                      },
+                      "Right": {
+                        "ScopedEval": {
+                          "Expression": {
+                            "Measure": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Medidas"
+                                }
+                              },
+                              "Property": "Clicks"
+                            }
+                          },
+                          "Scope": []
+                        }
+                      },
+                      "Operator": 3
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b5e83280b383e8bdf537",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Tasa de Clicks"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "daf64a50b9f701e266d1",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "aacbf48a9967da0938e3",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Device"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b74c975e8eeb3da7aaf7",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Ads"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Arithmetic": {
+                      "Left": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Medidas"
+                            }
+                          },
+                          "Property": "Clicks"
+                        }
+                      },
+                      "Right": {
+                        "ScopedEval": {
+                          "Expression": {
+                            "Measure": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Medidas"
+                                }
+                              },
+                              "Property": "Clicks"
+                            }
+                          },
+                          "Scope": []
+                        }
+                      },
+                      "Operator": 3
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eaf2596b563314c666ab": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "5c810b052d580c31a896",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Conversiones"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "acd506554ce53f88cc63",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "00b668cc8d32ff390901",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Device"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e09abf13ded729538daa",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Ads"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "donutChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Conversiones"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "a75dde79b18469ed841e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "6a85d586df4d8654ba1e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "63622731a6ad602d2ad1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9e2410f684e8ebfe8239",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Campaign"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e00dffcdc7bf1c13969f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Impresiones"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "df78339c8f66f4f28312",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "6e90dc97cd57bd93eed3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d3203b90dca33220801b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendario"
+                        }
+                      },
+                      "Property": "Nombre_Dia"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2acc64a67f956b84042e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Impresiones"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6a2cdbe5a877bb01ed05",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Tasa de Clicks"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendario"
+                        }
+                      },
+                      "Property": "Nombre_Dia"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "f5a1b5843fdda37ae33d": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "e08a0bb9ecbdb29e4fa2": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4c27cf9c1bf8b1e6b7bb",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0ad16abf8dfedf96938a",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Device"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9fd847f6bd8e8bdb0252",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Ads"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f3638afd13c43de8783a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Costos"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "donutChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Costos"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "3df756424c7b6ac5dddc": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e91cbe5179d2439b8630",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7a39467c3c76b4efed46",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Device"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2e24bf57f37a519c19af",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Ads"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9de1d38cd6a509070ccc",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Costos"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "donutChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Costos"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Device Ad"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "a9be534b48130346cfec": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "0774dc0f67e94dd6300f": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "6a1731dacaef5300d1bf": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "1bd0fde55409f662dbc8": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "0a368240b82d5f1e62a2": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "13beb7d26f6594a68e1c": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "963594062a6a99d5d638": {
+            "isHidden": false
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

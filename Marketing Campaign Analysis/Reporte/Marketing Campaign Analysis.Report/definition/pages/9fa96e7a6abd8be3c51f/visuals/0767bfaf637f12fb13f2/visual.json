@@ -1,0 +1,250 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "0767bfaf637f12fb13f2",
+  "position": {
+    "x": 790.66666666666663,
+    "y": 75.666666666666629,
+    "z": 3000,
+    "height": 326,
+    "width": 684,
+    "tabOrder": 15000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Hierarchy": "Channel Campaign Device"
+                    }
+                  },
+                  "Level": "Channel"
+                }
+              },
+              "queryRef": "Detalles.Channel Campaign Device.Channel",
+              "nativeQueryRef": "Channel Campaign Device Channel",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Hierarchy": "Channel Campaign Device"
+                    }
+                  },
+                  "Level": "City"
+                }
+              },
+              "queryRef": "Detalles.Channel Campaign Device.City",
+              "nativeQueryRef": "Channel Campaign Device City",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Hierarchy": "Channel Campaign Device"
+                    }
+                  },
+                  "Level": "Campaign"
+                }
+              },
+              "queryRef": "Detalles.Channel Campaign Device.Campaign",
+              "nativeQueryRef": "Channel Campaign Device Campaign",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Hierarchy": "Channel Campaign Device"
+                    }
+                  },
+                  "Level": "Device"
+                }
+              },
+              "queryRef": "Detalles.Channel Campaign Device.Device",
+              "nativeQueryRef": "Channel Campaign Device Device",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Hierarchy": "Channel Campaign Device"
+                    }
+                  },
+                  "Level": "Ads"
+                }
+              },
+              "queryRef": "Detalles.Channel Campaign Device.Ads",
+              "nativeQueryRef": "Channel Campaign Device Ads",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Ganancia por conversion"
+                }
+              },
+              "queryRef": "Medidas.Ganancia por conversion",
+              "nativeQueryRef": "Ganancia por conversion"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Ganancia por conversion"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "0bf24e51a6bc000161b8"
+}

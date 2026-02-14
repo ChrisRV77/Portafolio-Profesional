@@ -1,0 +1,170 @@
+table Calendario
+	lineageTag: 491cb142-b9ac-4945-a985-f68aee55828d
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 625d19a2-5975-4810-a896-11f655362976
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		variation Variación
+			isDefault
+			relationship: 081821a9-aa12-4160-a9a5-a4b81e3d749c
+			defaultHierarchy: LocalDateTable_bcbe96f8-05e1-41d7-99a7-a05d4ace38dc.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Año
+		dataType: int64
+		formatString: 0
+		lineageTag: f798f2d1-be12-4697-8bf5-c6271edafd8b
+		summarizeBy: sum
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: int64
+		formatString: 0
+		lineageTag: ac0e655f-125e-41dc-a129-d249c31f668a
+		summarizeBy: sum
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre_Mes
+		dataType: string
+		lineageTag: b8c8f986-5caf-486f-a1df-753a32b7f17b
+		summarizeBy: none
+		sourceColumn: Nombre_Mes
+		sortByColumn: Mes
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes_Año
+		dataType: string
+		lineageTag: 81fe9eeb-d097-401f-b175-000c5fc68d09
+		summarizeBy: none
+		sourceColumn: Mes_Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: 14ed1727-2658-40d1-8db2-162d6f427a23
+		summarizeBy: sum
+		sourceColumn: Trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semana_Año
+		dataType: int64
+		formatString: 0
+		lineageTag: 75119ac0-7708-4a72-9b3e-534e0c3bb60e
+		summarizeBy: sum
+		sourceColumn: Semana_Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		dataType: int64
+		formatString: 0
+		lineageTag: e2a07aa9-55bd-4ef6-b112-f39c39befcfa
+		summarizeBy: sum
+		sourceColumn: Dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia_Semana
+		dataType: int64
+		formatString: 0
+		lineageTag: 53cad1f2-adb4-4f05-a682-86068040844a
+		summarizeBy: sum
+		sourceColumn: Dia_Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre_Dia
+		dataType: string
+		lineageTag: 752c0abb-60ba-45ae-a543-92c88d994493
+		summarizeBy: none
+		sourceColumn: Nombre_Dia
+		sortByColumn: Dia_Semana
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Es_Fin_Semana
+		dataType: int64
+		formatString: 0
+		lineageTag: f0321ef6-a684-498c-ad44-2a2396c7f174
+		summarizeBy: sum
+		sourceColumn: Es_Fin_Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column Inicio_Mes
+		dataType: int64
+		formatString: 0
+		lineageTag: ccc1d822-7d3d-4a7c-b2f0-54b1f5c10d56
+		summarizeBy: sum
+		sourceColumn: Inicio_Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fin_Mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 64d49ee3-be0a-4582-b778-a5735a2b24c3
+		summarizeBy: sum
+		sourceColumn: Fin_Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia_Año
+		dataType: int64
+		formatString: 0
+		lineageTag: 4f0d6b67-4b56-4e15-b3b4-52185c2def10
+		summarizeBy: sum
+		sourceColumn: Dia_Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año_Semana
+		dataType: string
+		lineageTag: 789b7252-03df-45a0-a7e2-60b453ffabef
+		summarizeBy: none
+		sourceColumn: Año_Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column Orden_Mes
+		dataType: int64
+		formatString: 0
+		lineageTag: ae05bfb1-a20b-42f3-959c-4501a5f299be
+		summarizeBy: sum
+		sourceColumn: Orden_Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\MSI\Documents\GitHub\Portafolio-Profesional\Marketing Campaign Analysis\Data\dim_calendar_2025.csv"),[Delimiter=",", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Fecha", type date}, {"Año", Int64.Type}, {"Mes", Int64.Type}, {"Nombre_Mes", type text},{"Mes_Año", type text}, {"Trimestre", Int64.Type}, {"Semana_Año", Int64.Type}, {"Dia", Int64.Type}, {"Dia_Semana", Int64.Type}, {"Nombre_Dia", type text}, {"Es_Fin_Semana", Int64.Type}, {"Inicio_Mes", Int64.Type}, {"Fin_Mes", Int64.Type}, {"Dia_Año", Int64.Type}, {"Año_Semana", type text}, {"Orden_Mes", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

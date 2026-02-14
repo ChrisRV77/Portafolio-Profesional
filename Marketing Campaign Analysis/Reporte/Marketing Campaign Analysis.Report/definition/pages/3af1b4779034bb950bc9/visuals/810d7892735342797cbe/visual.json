@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "810d7892735342797cbe",
+  "position": {
+    "x": 3.3333333333333339,
+    "y": 481.66666666666669,
+    "z": 1000,
+    "height": 401.66666666666674,
+    "width": 1478.3333333333335,
+    "tabOrder": 2000
+  },
+  "visualGroup": {
+    "displayName": "Desglose clicks conversiones",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "6bbdd4623fb2e15f12a9"
+}

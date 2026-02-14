@@ -1,0 +1,24 @@
+model Model
+	culture: es-MX
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-EC
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Calendario","Dataset Marketing","Detalles","Costos_Ganancia","Medidas"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_d452cd1c-9a35-4e77-b0c9-f04a2a77010d
+ref table Calendario
+ref table LocalDateTable_bcbe96f8-05e1-41d7-99a7-a05d4ace38dc
+ref table 'Dataset Marketing'
+ref table Detalles
+ref table Costos_Ganancia
+ref table Medidas
+
+ref cultureInfo es-MX
+

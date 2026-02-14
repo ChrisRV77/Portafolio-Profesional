@@ -1,0 +1,1026 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
+  "displayName": "No filtros A&r",
+  "name": "88b323dd808e6fc519f0",
+  "options": {
+    "targetVisualNames": []
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "9fa96e7a6abd8be3c51f",
+    "sections": {
+      "9fa96e7a6abd8be3c51f": {
+        "visualContainers": {
+          "e37a696f14057c967b2e": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "f54ba99fd8f59ca34aec": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "374c5df8fc9e777c0355": {
+            "singleVisual": {
+              "visualType": "pageNavigator",
+              "objects": {}
+            }
+          },
+          "6cd02ce0c0921f4fe6ca": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b4fd72ea6926a19e787b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Between'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "ff90b0153be37ee792cb": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "f622c192692ec11ae6b3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "50999bd80b2f085535fb",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Channel"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Channel"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Channel"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "a25a7c985c5087af7790": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "6279a683a86e611da6da",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Campaign"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Campaign"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Campaign"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "acfae116d3a0aef02463": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "1e108425a152c6e9c48b": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d5a7eefd9383c61ba867": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "5753b362754e84ba0eee": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "fe70b5142093691b4245",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "02e9c74a84ea19379142",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Campaign"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e9886bea37fb9838b5ab",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Device"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b49768c7c96683f9d36d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Costos"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "22f8df10a2d8c52cb94a",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Ads"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "donutChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Costos"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "7b2a19f872b29e4b72ff": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d456c6e035b1d860fc3c",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "City Campaign Device"
+                        }
+                      },
+                      "Level": "City"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0cec0453610647736c87",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "City Campaign Device"
+                        }
+                      },
+                      "Level": "Campaign"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4997de3a0f2497b0be80",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "City Campaign Device"
+                        }
+                      },
+                      "Level": "Device"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6018a349d65885ff432b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Ganancia"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "donutChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Ganancia"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "City Campaign Device"
+                        }
+                      },
+                      "Level": "City"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "509afc3c77b405e31a5b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "92b1edb32a5d148a09ff",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Clicks"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "770dc0855a4bcd796aa8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Conversiones"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dc31168912bf5524cf0a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dataset Marketing"
+                        }
+                      },
+                      "Property": "Id_detalle"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "21216d06b6229c6960f7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Detalles"
+                        }
+                      },
+                      "Property": "Channel"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "scatterChart",
+              "objects": {
+                "merge": {
+                  "zoom": [
+                    {
+                      "properties": {
+                        "categoryMax": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "1D"
+                            }
+                          }
+                        },
+                        "categorySize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "990.3287018013189D"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "X": [
+                  {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Clicks"
+                    }
+                  }
+                ],
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dataset Marketing"
+                        }
+                      },
+                      "Property": "Id_detalle"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "9018091243f8ee46c3af": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "26ea05283c8a8a111116": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "5460757a2468bab27b2c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c534b0492df31520fce4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Costo por conversion"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c49750af161da4b24a1e",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "29f54df1b3c59b8824d7",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "City"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "71dbd3fe0dff5e2a5356",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Campaign"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "366241412ae79bad77e6",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Device"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5c2397b794cdbb0fe8ff",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Ads"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Costo por conversion"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "0767bfaf637f12fb13f2": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f46cbc382a8500d38c45",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a23be2d788ad58af5cbd",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "City"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "76050f0b31f50a252834",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Campaign"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b3a457957635200e43c0",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Device"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "551498828e3af4d7d12b",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Ads"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0b2b19d1580a754d4165",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Ganancia por conversion"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Ganancia por conversion"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Detalles"
+                            }
+                          },
+                          "Hierarchy": "Channel Campaign Device"
+                        }
+                      },
+                      "Level": "Channel"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "3f4f1f05fe4d4d5d21cc": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "fe33a30e34ce7963d89f": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "de12e5cf82d05676fbb5": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "4ed7502e31667c43ddb1": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "4d884062a7f086057401": {
+            "isHidden": false
+          },
+          "bb192996dbd2da2a6057": {
+            "isHidden": true
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

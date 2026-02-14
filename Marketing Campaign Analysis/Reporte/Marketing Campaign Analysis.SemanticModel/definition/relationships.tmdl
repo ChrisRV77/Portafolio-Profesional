@@ -1,0 +1,21 @@
+relationship 081821a9-aa12-4160-a9a5-a4b81e3d749c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendario.Fecha
+	toColumn: LocalDateTable_bcbe96f8-05e1-41d7-99a7-a05d4ace38dc.Date
+
+relationship ad02f6bf-6dcf-f5b6-e990-8f4e60a5c7b9
+	fromColumn: 'Dataset Marketing'.Fecha
+	toColumn: Calendario.Fecha
+
+relationship 9966c218-a943-a799-ee88-391376f3f8d7
+	fromColumn: 'Dataset Marketing'.Id_detalle
+	toColumn: Detalles.Indice
+
+relationship d6b64df6-16ca-77b7-0c85-e7ce12319096
+	fromColumn: Costos_Ganancia.Fecha
+	toColumn: Calendario.Fecha
+
+relationship b32172fd-e29d-18f3-7575-6c1cca2e24ed
+	fromColumn: Costos_Ganancia.'Id Detalle'
+	toColumn: Detalles.Indice
+

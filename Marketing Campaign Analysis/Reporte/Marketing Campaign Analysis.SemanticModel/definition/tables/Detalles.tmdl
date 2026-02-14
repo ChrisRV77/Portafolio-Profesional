@@ -1,0 +1,123 @@
+table Detalles
+	lineageTag: 4904cfdf-19ad-4e9e-a211-c41240b97876
+
+	column Campaign
+		dataType: string
+		lineageTag: 4f6542d7-6621-44cf-9d1c-81678be94cd1
+		summarizeBy: none
+		sourceColumn: Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column Channel
+		dataType: string
+		lineageTag: 0f3a80df-e7da-48a1-97c6-86495430abf7
+		summarizeBy: none
+		sourceColumn: Channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: c1ea0728-d4cc-4702-ac48-193a7d3d5807
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Device
+		dataType: string
+		lineageTag: 1e0c1200-15ee-487d-bda6-c935d03bc357
+		summarizeBy: none
+		sourceColumn: Device
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ads
+		dataType: string
+		lineageTag: 4ad6ae6c-6e3c-4f00-b8a4-0f44038e7d1d
+		summarizeBy: none
+		sourceColumn: Ads
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indice
+		dataType: string
+		lineageTag: 5e00c8be-30f8-4ca1-ba94-31f207cdb9b1
+		summarizeBy: none
+		sourceColumn: Indice
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Channel Device Ad'
+		lineageTag: d70e6e2a-86d2-4f0a-bd10-973d9e89c987
+
+		level Channel
+			lineageTag: b49a423b-4a31-4e03-8202-803c7774e986
+			column: Channel
+
+		level Device
+			lineageTag: ca5f9afa-9899-4a93-b46a-132182b1ac90
+			column: Device
+
+		level Ads
+			lineageTag: c1790332-4105-420c-97a7-2539919e3279
+			column: Ads
+
+	hierarchy 'Channel Campaign Device'
+		lineageTag: 5b6c95ff-2545-489e-a9e0-b0c4810c3e63
+
+		level Channel
+			lineageTag: adfc0b29-98fb-44dc-b0cb-b8b49d588fae
+			column: Channel
+
+		level City
+			lineageTag: cfe59199-9066-4e26-9426-1b73039f7e37
+			column: City
+
+		level Campaign
+			lineageTag: 42befaf8-4d21-419b-b9dc-172dfb0b7b7e
+			column: Campaign
+
+		level Device
+			lineageTag: 813b8644-63ff-44ba-bab0-9b062cdbdb6b
+			column: Device
+
+		level Ads
+			lineageTag: 36b04c83-1684-4266-a2cf-506e7bf0c0c4
+			column: Ads
+
+	hierarchy 'City Campaign Device'
+		lineageTag: db0da7ac-c8a4-41d4-93a2-09e59737f647
+
+		level City
+			lineageTag: 35c34e17-122b-4c01-bb8f-2f26ced38d74
+			column: City
+
+		level Campaign
+			lineageTag: 785672b8-104c-4421-8543-9e27e65ad770
+			column: Campaign
+
+		level Device
+			lineageTag: d97bf863-f8f1-4f20-b8d5-96305295cc5b
+			column: Device
+
+	partition Detalles = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\MSI\Documents\GitHub\Portafolio-Profesional\Marketing Campaign Analysis\Data\dataset_marketing_2025_500k.csv"),[Delimiter=",", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Fecha", type date}, {"Campaign", type text}, {"ID_Detalle", Int64.Type}, {"Channel", type text}, {"City", type text}, {"Device", type text}, {"Ads", type text}, {"Impresion", Int64.Type}, {"Click", Int64.Type}, {"Conversion", Int64.Type}}),
+				    #"Filas ordenadas" = Table.Sort(#"Tipo cambiado",{{"ID_Detalle", Order.Ascending}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Filas ordenadas",{"ID_Detalle", "Impresion", "Click", "Conversion", "Fecha"}),
+				    #"Columna combinada insertada" = Table.AddColumn(#"Columnas quitadas", "Combinada", each Text.Combine({[Campaign], [Channel], [City], [Device], [Ads]}, "-"), type text),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columna combinada insertada",{{"Combinada", "Indice"}}),
+				    #"Duplicados quitados" = Table.Distinct(#"Columnas con nombre cambiado", {"Indice"})
+				in
+				    #"Duplicados quitados"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

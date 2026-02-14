@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Marketing Campaign Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5a752b21-2581-40f5-93ad-adc9ebd027d5"
+  }
+}

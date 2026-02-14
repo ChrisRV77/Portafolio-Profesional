@@ -1,0 +1,85 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 771.09483683724284,
+            "y": 514.46300370939753
+          },
+          "nodeIndex": "Detalles",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 405.62444233996388,
+            "y": 503.35665640432507
+          },
+          "nodeIndex": "Calendario",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 797.92286419312518,
+            "y": 99.215991207037746
+          },
+          "nodeIndex": "Dataset Marketing",
+          "nodeLineageTag": "20f40f7d-0642-4e81-a77d-8215c552039b",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 438.12111996978791,
+            "y": 131.7490191308915
+          },
+          "nodeIndex": "Costos_Ganancia",
+          "nodeLineageTag": "204b055f-a386-473d-89a0-76f13298cc30",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 75.922501129391776,
+            "y": 326.09566393146173
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "b2a1ad48-5c0a-4819-9fbc-2ffb2e8afbb6",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 70.95554390096882,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

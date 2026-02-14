@@ -1,0 +1,90 @@
+table Medidas
+	lineageTag: b2a1ad48-5c0a-4819-9fbc-2ffb2e8afbb6
+
+	measure Impresiones = COUNTROWS('Dataset Marketing')
+		formatString: 0
+		displayFolder: CTR
+		lineageTag: b1cd4451-9060-42b6-9f51-18032e178352
+
+	measure Clicks = CALCULATE([Impresiones], 'Dataset Marketing'[Click] = 1)
+		formatString: 0
+		displayFolder: CTR
+		lineageTag: af095a1e-d689-4f19-84f3-c4aff19ecb2a
+
+	measure Conversiones = CALCULATE([Impresiones], 'Dataset Marketing'[Conversion] = 1)
+		formatString: 0
+		displayFolder: CTR
+		lineageTag: 9335376b-dc02-4552-9174-f1537deb2c23
+
+	measure Costos = SUM(Costos_Ganancia[Costos])
+		formatString: 0
+		displayFolder: Finanzas
+		lineageTag: f1c55567-08e3-4da1-8876-2107a5632ad7
+
+	measure Ganancia = SUM(Costos_Ganancia[Ganancias])
+		formatString: 0
+		displayFolder: Finanzas
+		lineageTag: cb216fda-4912-4d72-9b71-47d3ad5bade6
+
+	measure Profit = [Ganancia] - [Costos]
+		formatString: 0
+		displayFolder: Finanzas
+		lineageTag: d8fd2e53-2ac7-4996-8b59-44734750bb53
+
+	measure 'Variacion mes pasado impresiones' =
+			
+			VAR impresiones_mes_pasado = CALCULATE([Impresiones], DATEADD(Calendario[Fecha], -1,MONTH))
+			VAR numerador = [Impresiones] - impresiones_mes_pasado
+			VAR variacion = DIVIDE(numerador, impresiones_mes_pasado, 0)
+			
+			RETURN variacion
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Etiqueta de Referencia
+		lineageTag: 1bf6fb5b-b76e-40cf-bbf3-ea06d941a2a4
+
+	measure 'Tasa de Clicks' = DIVIDE([Clicks], [Impresiones], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Etiqueta de Referencia
+		lineageTag: 728af227-0f5c-4a97-8f34-df3b0f571f22
+
+	measure 'Variacion mes pasado conversiones' =
+			
+			VAR impresiones_mes_pasado = CALCULATE([Conversiones], DATEADD(Calendario[Fecha], -1,MONTH))
+			VAR numerador = [Conversiones] - impresiones_mes_pasado
+			VAR variacion = DIVIDE(numerador, impresiones_mes_pasado, 0)
+			
+			RETURN variacion
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Etiqueta de Referencia
+		lineageTag: c0a5f092-c33d-43b1-b1b0-984d6b1eb799
+
+	measure 'Costo por conversion' = DIVIDE([Costos], [Conversiones],0)
+		displayFolder: Etiqueta de Referencia
+		lineageTag: f51418b3-ab47-4dcf-b451-4308d998864b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Profit por conversion' = DIVIDE([Profit], [Conversiones],0)
+		displayFolder: Etiqueta de Referencia
+		lineageTag: 2e101d2b-f6fe-462f-9177-0f6f53ceefc4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Ganancia por conversion' = DIVIDE([Ganancia], [Conversiones],0)
+		displayFolder: Etiqueta de Referencia
+		lineageTag: 0325fae0-9ec2-474e-bd27-5e73b219da1d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+

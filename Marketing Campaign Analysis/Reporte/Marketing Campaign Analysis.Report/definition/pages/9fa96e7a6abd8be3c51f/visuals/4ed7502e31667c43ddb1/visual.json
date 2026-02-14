@@ -1,0 +1,347 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "4ed7502e31667c43ddb1",
+  "position": {
+    "x": 943.33333333333337,
+    "y": 121.66666666666667,
+    "z": 3000,
+    "height": 683.33333333333337,
+    "width": 528.33333333333337,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "INSIGHTS:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "1. Campañas",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Durante el período ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "enero–mayo (Campaña Invierno)",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": " se observa un incremento significativo en los costos operativos frente al período ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "junio–diciembre (Campaña Verano)",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Sin embargo, las ganancias se mantienen relativamente estables a lo largo del año, lo que indica que:",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "La empresa asume mayor inversión en temporada de invierno.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "El margen tiende a comprimirse en invierno.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "En verano se optimiza mejor la rentabilidad debido a menores costos.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "💡 ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "Interpretación estratégica:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " Existe una oportunidad para optimizar la inversión en invierno o mejorar la eficiencia del gasto publicitario en ese período.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2. Campañas",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "A lo largo del año, las ganancias presentan una fluctuación controlada (comportamiento ondulante), pero siempre se mantienen por encima de los costos.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Esto sugiere que:",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "El modelo de negocio es estructuralmente rentable.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Las variaciones estacionales no afectan la estabilidad financiera.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Existe control en la relación costo-beneficio.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "💡 ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "Interpretación estratégica:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " La empresa mantiene un margen positivo constante, lo que indica buena planificación financiera y estabilidad en la generación de ingresos.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "bb192996dbd2da2a6057"
+}
