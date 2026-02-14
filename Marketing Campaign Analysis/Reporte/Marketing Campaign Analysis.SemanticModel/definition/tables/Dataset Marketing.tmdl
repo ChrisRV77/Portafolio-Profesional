@@ -44,11 +44,9 @@ table 'Dataset Marketing'
 				let
 				    Origen = Csv.Document(File.Contents("C:\Users\MSI\Documents\GitHub\Portafolio-Profesional\Marketing Campaign Analysis\Data\dataset_marketing_2025_500k.csv"),[Delimiter=",", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Fecha", type date}, {"Campaign", type text}, {"ID_Detalle", Int64.Type}, {"Channel", type text}, {"City", type text}, {"Device", type text}, {"Ads", type text}, {"Impresion", Int64.Type}, {"Click", Int64.Type}, {"Conversion", Int64.Type}}),
-				    #"Filas ordenadas" = Table.Sort(#"Tipo cambiado",{{"ID_Detalle", Order.Ascending}}),
-				    #"Columnas quitadas" = Table.RemoveColumns(#"Filas ordenadas",{"ID_Detalle"}),
-				    #"Columnas combinadas" = Table.CombineColumns(#"Columnas quitadas",{"Campaign", "Channel", "City", "Device", "Ads"},Combiner.CombineTextByDelimiter("-", QuoteStyle.None),"Id_detalle"),
-				    #"Columnas quitadas1" = Table.RemoveColumns(#"Columnas combinadas",{"Impresion"})
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Fecha", type date}, {"Campaign", type text}, {"Channel", type text}, {"City", type text}, {"Device", type text}, {"Ads", type text}, {"Impresion", Int64.Type}, {"Click", Int64.Type}, {"Conversion", Int64.Type}}),
+				    #"Columnas combinadas" = Table.CombineColumns(#"Tipo cambiado",{"Campaign", "Channel", "City", "Device", "Ads"},Combiner.CombineTextByDelimiter("-", QuoteStyle.None),"Id_detalle"),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Columnas combinadas",{"Impresion", "ID_Detalle"})
 				in
 				    #"Columnas quitadas1"
 

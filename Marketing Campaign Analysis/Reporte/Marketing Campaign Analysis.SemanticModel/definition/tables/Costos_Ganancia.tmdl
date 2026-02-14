@@ -21,7 +21,7 @@ table Costos_Ganancia
 		annotation SummarizationSetBy = Automatic
 
 	column Costos
-		dataType: int64
+		dataType: double
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 6ee1ba50-c274-4c9e-8d3d-0b14b077a867
 		summarizeBy: sum
@@ -30,7 +30,7 @@ table Costos_Ganancia
 		annotation SummarizationSetBy = Automatic
 
 	column Ganancias
-		dataType: int64
+		dataType: double
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: f55e4c02-0b26-435d-8291-98a89809f4e8
 		summarizeBy: sum
@@ -46,9 +46,11 @@ table Costos_Ganancia
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Fecha", type date}, {"Campaign", type text}, {"Channel", type text}, {"City", type text}, {"Device", type text}, {"Ads", type text}, {"Costos", Int64.Type}, {"Ganancias", Int64.Type}}),
 				    #"Columnas combinadas" = Table.CombineColumns(#"Tipo cambiado",{"Campaign", "Channel", "City", "Device", "Ads"},Combiner.CombineTextByDelimiter("-", QuoteStyle.None),"Combinada"),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas combinadas",{{"Combinada", "Id Detalle"}})
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas combinadas",{{"Combinada", "Id Detalle"}}),
+				    #"Columna dividida" = Table.TransformColumns(#"Columnas con nombre cambiado", {{"Costos", each _ / 10000, type number}}),
+				    #"Columna dividida1" = Table.TransformColumns(#"Columna dividida", {{"Ganancias", each _ / 3000, type number}})
 				in
-				    #"Columnas con nombre cambiado"
+				    #"Columna dividida1"
 
 	annotation PBI_NavigationStepName = Navegación
 
